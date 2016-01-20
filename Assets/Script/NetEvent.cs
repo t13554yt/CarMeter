@@ -3,5 +3,6 @@
 	Connect,
 	Disconnect,
 	Error,
-	None
+	None,
+	Switch
 }
