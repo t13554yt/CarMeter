@@ -81,6 +81,10 @@ public class IdleChanger : MonoBehaviour
 					anim.SetBool ("Back", true);
 	}
 
+	public void Next()
+	{
+		anim.SetBool ("Next", true);
+	}
 
 	// ランダム判定用関数
 	IEnumerator RandomChange ()

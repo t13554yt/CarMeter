@@ -11,7 +11,9 @@ public class GameSystem : MonoBehaviour {
 		ConnectToHost,
 		Connecting,
 	}
-	
+
+	public IdleChanger _idleChanger;
+
 	private const int _PORT = 50000;
 	private IPAddress _hostAddress;
 	private TCPNetwork _tcpNetwork;
@@ -62,7 +64,7 @@ public class GameSystem : MonoBehaviour {
 	}
 	
 	private void StepStartServer() {
-		_statusText.text = "サーバーとして開始";
+		_statusText.text = "運転中";
 		
 		_tcpNetwork.StartServer(_PORT, 1);
 	}
@@ -100,7 +102,9 @@ public class GameSystem : MonoBehaviour {
 	}
 	
 	private void StepConnecting() {
-		_statusText.text = "接続中";
+		_statusText.text = "運転教えてくれてありがとう！！また教えてね！！";
+		_idleChanger.Next();
+
 	}
 	
 	private void UpdateConnecting() {

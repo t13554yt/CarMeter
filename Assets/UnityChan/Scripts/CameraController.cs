@@ -66,6 +66,7 @@ namespace CameraController
 		}
 
 		//Show Instrustion Window
+	/*
 		void OnGUI()
 		{
 			if(showInstWindow){
@@ -76,6 +77,7 @@ namespace CameraController
 			}
 
 		}
+		*/
 
 		void mouseEvent()
 		{
